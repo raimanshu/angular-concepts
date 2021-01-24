@@ -1,4 +1,4 @@
-# AngularConcepts
+<!-- # AngularConcepts
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
@@ -24,4 +24,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page. -->
+
+#Angular Concepts
+
+##Intro :
+This project is based on implementations of various angular projects. This project also covers the basic issues faced by angular developers with step by step description.
+
+Every concepts are included into different modules.
+
+##Implemntations :
+
+Data Binding - string interpolation
