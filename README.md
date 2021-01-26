@@ -36,3 +36,6 @@ Every concepts are included into different modules.
 ##Implemntations :
 
 Data Binding - string interpolation
+Data Binding - event binding
+<!-- Data Binding - string interpolation -->
+
