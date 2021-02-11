@@ -1,5 +1,6 @@
+import { SampleService } from './../services/sample.service';
 import { Component, Input, OnInit, Output } from '@angular/core';
-import * as EventEmitter from 'events';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-component1',
@@ -8,18 +9,34 @@ import * as EventEmitter from 'events';
 })
 export class Component1Component implements OnInit {
 
-  @Input() counter ;
-  counterChange = "dddd"
-  @Output() newItemEvent = new EventEmitter();
-  constructor() { }
+  @Input() counter;
+  counterChange;
+
+  serviceVariable;
+
+  
+  // @Output() newItemEvent = new EventEmitter();
+
+  @Output() public data = new EventEmitter();
+
+  constructor(
+    private sampleService : SampleService
+  ) { }
 
   ngOnInit(): void {
-    this.counterChange ;
+    this.counterChange;
+
+    this.data.emit('I am a data variable comming from child component1 to parent component');
+
+    this.serviceVariable = this.sampleService.getComponentData();
+    
+
   }
 
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
-  }
+
+  // addNewItem(value: string) {
+  //   this.newItemEvent.emit(value);
+  // }
 
 
 }

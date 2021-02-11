@@ -25,12 +25,16 @@ parent interacting with child using a local variable<br>
     <div class="col-6 border border-dark">
         <h3>Parent Component</h3>
         {{counter}}
+        <br>
         {{counterChange}}
+        <br>
+        {{message}}<br>
+        {{serviceVariable}}
     </div>
 </div>
 <div class="row">
     <div class="col-6 border border-dark">
-        <app-component1 [counter]="counter" (newItemEvent)="addItem($event)"></app-component1>
+        <app-component1 [counter]="counter" (data) = "change_name_age($event)"></app-component1>
     </div>
     <div class="col-6 border border-dark">
         <app-component2></app-component2>

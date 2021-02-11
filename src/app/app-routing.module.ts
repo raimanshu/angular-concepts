@@ -16,6 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./component-interaction/component-interaction.module').then(m => m.ComponentInteractionModule)
   },
   {
+    path: 'error-list',
+    loadChildren: () => import('./errors-list/errors-list.module').then(m => m.ErrorsListModule)
+  },
+  {
+    path: 'subject-behaviour',
+    loadChildren: () => import('./subject-behaviour/subject-behaviour.module').then(m => m.SubjectBehaviourModule)
+  },
+  {
     path:'intro', component: IntroComponent
   },
   { path: '',   redirectTo: 'intro', pathMatch: 'full' }, // redirect to `first-component`
