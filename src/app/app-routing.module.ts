@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./subject-behaviour/subject-behaviour.module').then(m => m.SubjectBehaviourModule)
   },
   {
+    path: 'angular-forms',
+    loadChildren: () => import('./angular-forms/angular-forms.module').then(m => m.AngularFormsModule)
+  },
+  {
     path:'intro', component: IntroComponent
   },
   { path: '',   redirectTo: 'intro', pathMatch: 'full' }, // redirect to `first-component`
