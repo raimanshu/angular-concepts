@@ -12,6 +12,10 @@ const routes: Routes = [
     path:'data-binding/event-binding', component: EventBindingComponent
   },
   {
+    path: 'component-interaction',
+    loadChildren: () => import('./component-interaction/component-interaction.module').then(m => m.ComponentInteractionModule)
+  },
+  {
     path:'intro', component: IntroComponent
   },
   { path: '',   redirectTo: 'intro', pathMatch: 'full' }, // redirect to `first-component`

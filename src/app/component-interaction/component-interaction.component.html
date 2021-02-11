@@ -1,0 +1,38 @@
+<p>component-interaction works!</p>
+
+using @input()<br>
+using @output()<br>
+using services<br>
+parent component calling viewchild<br>
+parent interacting with child using a local variable<br>
+
+<!-- <div style="border: 1px solid black;">
+    <div style="width:50%;border: 1px solid black;display: inline-block;">
+        <app-component1></app-component1>
+    </div>
+    <div style="width:50%;border: 1px solid black;display: inline-block;">
+        <app-component2></app-component2>
+    </div>
+</div> -->
+<div class="row">
+    <div class="col-6 border border-dark">
+        using @input()<br>
+        using @output()<br>
+        using services<br>
+        parent component calling viewchild<br>
+        parent interacting with child using a local variable<br>
+    </div>
+    <div class="col-6 border border-dark">
+        <h3>Parent Component</h3>
+        {{counter}}
+        {{counterChange}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-6 border border-dark">
+        <app-component1 [counter]="counter" (newItemEvent)="addItem($event)"></app-component1>
+    </div>
+    <div class="col-6 border border-dark">
+        <app-component2></app-component2>
+    </div>
+</div>
