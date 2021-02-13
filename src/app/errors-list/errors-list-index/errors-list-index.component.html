@@ -2,3 +2,8 @@
     <label>Problem :</label><span>ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value: ''. Current value: 'I am a data variable comming from child component1 to parent component'.</span><br>
     <label>Solution :</label><span>Put the statements/function statements in ngAfterContentInit() </span>
 </div>
+
+<div>
+    <label>Problem :</label><span>Error: Export of name 'ngForm' not found!</span><br>
+    <label>Solution :</label><span>Put FormsModule in module. This error was due to using [(ngModel)] and not including FormsModule. </span>
+</div>

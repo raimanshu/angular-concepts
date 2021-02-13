@@ -3,90 +3,123 @@
 
 <button [routerLink]="['/angular-forms/template-driven-forms/tdf-password-validation']" >tdf-password-validation</button>
 
+<button (click)="initializeForm()" >Initialize Form</button>
 
-<div style="background-color: gainsboro;" class="container">
+<div style="background-color: gainsboro;" class="container" *ngIf="!showInitialized">
     <div class="row">
         <div class="col-md-6">
             <div class="p-4">
                 <h1 class="mb-3 text-18">Template Driven Form</h1>
                 <form #f="ngForm" (ngSubmit)="onSubmitForm(f.value)">
-                    <fieldset ngModelGroup="name">
+                    <fieldset ngModelGroup="input">
                         <div class="form-group">
-                            <label for="username">First Name</label>
-                            <input id="username" class="form-control form-control-rounded" name="firstName" ngModel>
+                            <label for="input_text">Input Text</label>
+                            <input id="input_text" class="form-control form-control-rounded" name="input_text" ngModel>
                         </div>
+
                         <div class="form-group">
-                            <label for="username">Last Name</label>
-                            <input id="username" class="form-control form-control-rounded" name="lastName" ngModel>
+                            <label for="input_email">Input Email</label>
+                            <input id="input_email" class="form-control form-control-rounded" type="email" name="input_email" ngModel>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_password">Password</label>
+                            <input id="input_password" class="form-control form-control-rounded" type="password" name="input_password"
+                                ngModel>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input_color">Input Color</label>
+                            <input id="input_color" class="form-control form-control-rounded" type="color" name="input_color" ngModel>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_date">Input Date</label>
+                            <input id="input_date" class="form-control form-control-rounded" type="date" name="input_date" ngModel>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_datetime-local">Input Datetime-local</label>
+                            <input id="input_datetime-local" class="form-control form-control-rounded" type="datetime-local"
+                                name="input_datetime-local" ngModel>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_file">Input File</label>
+                            <input id="input_file" class="form-control form-control-rounded" type="file" name="input_file" ngModel>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_month">Input Month</label>
+                            <input id="input_month" class="form-control form-control-rounded" type="month" name="input_month" ngModel>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_number">Input Number</label>
+                            <input id="input_number" class="form-control form-control-rounded" type="number" name="input_number"
+                                ngModel>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input_range">Input Range</label>
+                            <input id="input_range" class="form-control form-control-rounded" type="range" name="input_range" ngModel>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_reset">Input Reset</label>
+                            <input id="input_reset" class="form-control form-control-rounded" type="reset" name="input_reset" ngModel>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_search">Input Search</label>
+                            <input id="input_search" class="form-control form-control-rounded" type="search" name="input_search"
+                                ngModel>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_tel">Input Tel</label>
+                            <input id="input_tel" class="form-control form-control-rounded" type="tel" name="input_tel" ngModel>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_time">Input Time</label>
+                            <input id="input_time" class="form-control form-control-rounded" type="time" name="input_time" ngModel>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_url">Url</label>
+                            <input id="url" class="form-control form-control-rounded" type="url" name="input_url" ngModel>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_week">Input Week</label>
+                            <input id="input_week" class="form-control form-control-rounded" type="week" name="input_week" ngModel>
+                        </div>
+    
+                        <div class="container">
+                            <input type="input_checkbox" name="input_checkbox" ngModel>
+                            <small class="px-2">Input Checkbox</small>
                         </div>
                     </fieldset>
 
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input id="email" class="form-control form-control-rounded" type="email" name="email" ngModel>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input id="password" class="form-control form-control-rounded" type="password" name="password"
-                            ngModel>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="repassword">Retype password</label>
-                        <input id="repassword" class="form-control form-control-rounded" type="password"
-                            name="confirmPassword" ngModel>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="repassword">Choose color</label>
-                        <input id="color" class="form-control form-control-rounded" type="color" name="color" ngModel>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="date">Select date</label>
-                        <input id="date" class="form-control form-control-rounded" type="date" name="date" ngModel>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="datetime-local">Select date-time-local</label>
-                        <input id="datetime-local" class="form-control form-control-rounded" type="datetime-local"
-                            name="datetime-local" ngModel>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="file">Upload file</label>
-                        <input id="file" class="form-control form-control-rounded" type="file" name="file" ngModel>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="month">Month</label>
-                        <input id="month" class="form-control form-control-rounded" type="month" name="month" ngModel>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="number">Number</label>
-                        <input id="number" class="form-control form-control-rounded" type="number" name="number"
-                            ngModel>
-                    </div>
-
-                    <fieldset>
+                    <fieldset ngModelGroup="gender">
                         <legend>Gender</legend>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-6">
-
-                                    <label for="radio">Male</label>
-                                    <input id="radio" type="radio" name="radio" value="male" ngModel>
+                                    <label for="male">Male</label>
+                                    <input id="male" type="radio" name="gender" value="male" ngModel>
                                 </div>
                                 <div class="col-6">
-
-                                    <label for="radio">Female</label>
-                                    <input id="radio" type="radio" name="radio" value="female" ngModel>
+                                    <label for="female">Female</label>
+                                    <input id="female" type="radio" name="gender" value="female" ngModel>
                                 </div>
 
                             </div>
@@ -94,57 +127,142 @@
                         </div>
                     </fieldset>
 
+                    <button class="btn btn-primary btn-block btn-rounded mt-3">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-4">
+                <pre>{{f.value | json}}</pre>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div style="background-color: gainsboro;" class="container" *ngIf="showInitialized">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="p-4">
+                <h1 class="mb-3 text-18">Template Driven Form</h1>
+                <form #f="ngForm" (ngSubmit)="onSubmitForm(f.value)">
+                    <fieldset ngModelGroup="input">
+                        <div class="form-group">
+                            <label for="input_text">Input Text</label>
+                            <input id="input_text" class="form-control form-control-rounded" name="input_text" [(ngModel)]="user.input.input_text" >
+                        </div>
 
-                    <div class="form-group">
-                        <label for="range">Range</label>
-                        <input id="range" class="form-control form-control-rounded" type="range" name="range" ngModel>
-                    </div>
+                        <div class="form-group">
+                            <label for="input_email">Input Email</label>
+                            <input id="input_email" class="form-control form-control-rounded" type="email" name="input_email" [(ngModel)]="user.input.input_email">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_password">Password</label>
+                            <input id="input_password" class="form-control form-control-rounded" type="password" name="input_password"
+                            [(ngModel)]="user.input.input_password">
+                        </div>
 
+                        <div class="form-group">
+                            <label for="input_color">Input Color</label>
+                            <input id="input_color" class="form-control form-control-rounded" type="color" name="input_color" [(ngModel)]="user.input.input_color">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_date">Input Date</label>
+                            <input id="input_date" class="form-control form-control-rounded" type="date" name="input_date" [(ngModel)]="user.input.input_date">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_datetime_local">Input Datetime-local</label>
+                            <input id="input_datetime_local" class="form-control form-control-rounded" type="datetime-local"
+                                name="input_datetime_local" [(ngModel)]="user.input.input_datetime_local">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_file">Input File</label>
+                            <input id="input_file" class="form-control form-control-rounded" type="file" name="input_file" [(ngModel)]="user.input.input_file">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_month">Input Month</label>
+                            <input id="input_month" class="form-control form-control-rounded" type="month" name="input_month" [(ngModel)]="user.input.input_month">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_number">Input Number</label>
+                            <input id="input_number" class="form-control form-control-rounded" type="number" name="input_number"
+                            [(ngModel)]="user.input.input_number">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="reset">Reset</label>
-                        <input id="reset" class="form-control form-control-rounded" type="reset" name="reset" ngModel>
-                    </div>
+                        <div class="form-group">
+                            <label for="input_range">Input Range</label>
+                            <input id="input_range" class="form-control form-control-rounded" type="range" name="input_range" [(ngModel)]="user.input.input_range">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_reset">Input Reset</label>
+                            <input id="input_reset" class="form-control form-control-rounded" type="reset" name="input_reset" [(ngModel)]="user.input.input_reset">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_search">Input Search</label>
+                            <input id="input_search" class="form-control form-control-rounded" type="search" name="input_search"
+                            [(ngModel)]="user.input.input_search">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_tel">Input Tel</label>
+                            <input id="input_tel" class="form-control form-control-rounded" type="tel" name="input_tel" [(ngModel)]="user.input.input_tel">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_time">Input Time</label>
+                            <input id="input_time" class="form-control form-control-rounded" type="time" name="input_time" [(ngModel)]="user.input.input_time">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_url">Url</label>
+                            <input id="url" class="form-control form-control-rounded" type="url" name="input_url" [(ngModel)]="user.input.input_url">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_week">Input Week</label>
+                            <input id="input_week" class="form-control form-control-rounded" type="week" name="input_week" [(ngModel)]="user.input.input_week">
+                        </div>
+    
+                        <div class="container">
+                            <input type="input_checkbox" name="input_checkbox" [(ngModel)]="user.input.checkbox">
+                            <small class="px-2">Input Checkbox</small>
+                        </div>
+                    </fieldset>
 
-                    <div class="form-group">
-                        <label for="search">Search</label>
-                        <input id="search" class="form-control form-control-rounded" type="search" name="search"
-                            ngModel>
-                    </div>
+                    <fieldset ngModelGroup="gender">
+                        <legend>Gender</legend>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="male">Male</label>
+                                    <input id="male" type="radio" name="gender" value="male" [(ngModel)]="user.gender.male">
+                                </div>
+                                <div class="col-6">
+                                    <label for="female">Female</label>
+                                    <input id="female" type="radio" name="gender" value="female" [(ngModel)]="user.gender.female">
+                                </div>
 
+                            </div>
 
-                    <div class="form-group">
-                        <label for="tel">Telephone</label>
-                        <input id="tel" class="form-control form-control-rounded" type="tel" name="tel" ngModel>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="time">Time</label>
-                        <input id="time" class="form-control form-control-rounded" type="time" name="time" ngModel>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="url">Url</label>
-                        <input id="url" class="form-control form-control-rounded" type="url" name="url" ngModel>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="week">Week</label>
-                        <input id="week" class="form-control form-control-rounded" type="week" name="week" ngModel>
-                    </div>
-
-                    <div class="container">
-                        <input type="checkbox" name="temsCondition" ngModel>
-                        <small class="px-2">I agree all <span class="terms">Terms & Conditions</span></small>
-                    </div>
+                        </div>
+                    </fieldset>
 
                     <button class="btn btn-primary btn-block btn-rounded mt-3">Sign Up</button>
                 </form>
-                <!-- <div class="mt-3 text-center">
-                    <a href="" class="text-muted" routerLink="/Confirm-Email"><u>Confirm Password</u></a>
-                </div> -->
             </div>
         </div>
         <div class="col-md-6">
