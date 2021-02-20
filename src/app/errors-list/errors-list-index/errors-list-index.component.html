@@ -7,3 +7,9 @@
     <label>Problem :</label><span>Error: Export of name 'ngForm' not found!</span><br>
     <label>Solution :</label><span>Put FormsModule in module. This error was due to using [(ngModel)] and not including FormsModule. </span>
 </div>
+
+Error: Uncaught (in promise): NullInjectorError: R3InjectorError(ReactiveFormsModule)[FormBuilder -> FormBuilder -> FormBuilder -> FormBuilder -> FormBuilder]: 
+  NullInjectorError: No provider for FormBuilder!
+
+  No provider for ControlContainerng
+-removed  ngModelGroup="input"

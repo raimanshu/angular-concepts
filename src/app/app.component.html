@@ -1,1 +1,21 @@
-    <router-outlet></router-outlet>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <app-side-nav></app-side-nav>
+
+    </div>
+    <div class="col-8" style="padding-left: 17%;">
+      <app-header></app-header>
+      <div style="padding: 0 20px;">
+        <router-outlet></router-outlet>
+      </div>
+
+      <!-- <h1>Simple Sidebar</h1>
+        <p>
+          Make sure to keep all page content within the
+          <code>#content</code>.
+        </p> -->
+    </div>
+  </div>
+
+</div>

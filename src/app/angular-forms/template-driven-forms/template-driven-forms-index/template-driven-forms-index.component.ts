@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-template-driven-forms-index',
   templateUrl: './template-driven-forms-index.component.html',
-  styleUrls: ['./template-driven-forms-index.component.css']
+  styleUrls: ['./template-driven-forms-index.component.scss']
 })
 export class TemplateDrivenFormsIndexComponent implements OnInit {
 

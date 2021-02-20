@@ -1,1 +1,192 @@
-<p>reactive-forms-index works!</p>
+- Initialize the form with data - done
+- Make nested form structure using different ways 
+
+
+<button [routerLink]="['/angular-forms/reactive-forms/rf-password-validation']" >rf-password-validation</button>
+
+<button [routerLink]="['/angular-forms/reactive-forms/rf-input-validation']" >rf-input-validation</button>
+
+<button (click)="initializeForm()" >Initialize Form</button>
+<button (click)="initializeRegistration()" >Reset Form</button>
+
+
+<div style="background-color: gainsboro;" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="p-4">
+                <h1 class="mb-3 text-18">Template Driven Form</h1>
+                <form [formGroup]="signup" >
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="input_text">Input Text</label>
+                            <input id="input_text" class="form-control form-control-rounded" formControlName="input_text" >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input_email">Input Email</label>
+                            <input id="input_email" class="form-control form-control-rounded" type="email" formControlName="input_email">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_password">Password</label>
+                            <input id="input_password" class="form-control form-control-rounded" type="password" formControlName="input_password"
+                                >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input_color">Input Color</label>
+                            <input id="input_color" class="form-control form-control-rounded" type="color" formControlName="input_color">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_date">Input Date</label>
+                            <input id="input_date" class="form-control form-control-rounded" type="date" formControlName="input_date">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_datetime_local">Input Datetime-local</label>
+                            <input id="input_datetime_local" class="form-control form-control_rounded" type="datetime-local" formControlName="input_datetime_local"
+                            >
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_file">Input File</label>
+                            <input id="input_file" class="form-control form-control-rounded" type="file" formControlName="input_file">
+                            <div *ngIf="this.noFileInitialize">
+                                <small class="text text-danger">*File input can't be initialized.</small>
+                            </div>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_month">Input Month</label>
+                            <input id="input_month" class="form-control form-control-rounded" type="month" formControlName="input_month">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_number">Input Number</label>
+                            <input id="input_number" class="form-control form-control-rounded" type="number" formControlName="input_number"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input_range">Input Range</label>
+                            <input id="input_range" class="form-control form-control-rounded" type="range" formControlName="input_range">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_reset">Input Reset</label>
+                            <input id="input_reset" class="form-control form-control-rounded" type="reset" formControlName="input_reset">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_search">Input Search</label>
+                            <input id="input_search" class="form-control form-control-rounded" type="search" formControlName="input_search"
+                            >
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_tel">Input Tel</label>
+                            <input id="input_tel" class="form-control form-control-rounded" type="tel" formControlName="input_tel">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_time">Input Time</label>
+                            <input id="input_time" class="form-control form-control-rounded" type="time" formControlName="input_time">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="input_url">Url</label>
+                            <input id="url" class="form-control form-control-rounded" type="url" formControlName="input_url">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="input_week">Input Week</label>
+                            <input id="input_week" class="form-control form-control-rounded" type="week" formControlName="input_week">
+                        </div>
+    
+                        <div class="container">
+                            <input type="checkbox" formControlName="input_checkbox">
+                            <small class="px-2">Input Checkbox</small>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Gender</legend>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="male">Male</label>
+                                    <input id="male" type="radio" value="male" formControlName="male">
+                                </div>
+                                <div class="col-6">
+                                    <label for="female">Female</label>
+                                    <input id="female" type="radio" value="female" formControlName="male" >
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <!-- <div class="form-group">
+                        <label for="input_reset">Reset Form</label>
+                        <input id="input_reset" class="btn btn-primary btn-block btn-rounded mt-3" type="reset" >
+                    </div> -->
+
+                    <button class="btn btn-primary btn-block btn-rounded mt-3">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-4">
+                <pre>{{signup.value | json}}</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- <p>Label</p> -->
+
+<!-- <p>Text Input</p> -->
+<!-- <p>Password Input</p> -->
+<p>button Input</p>
+<!-- <p>checkbox Input</p> -->
+<p>color Input</p>
+<p>date Input</p>
+<p>datetime-local Input</p>
+<p>email Input</p>
+<p>file Input</p>
+<!-- <p>hidden Input</p> -->
+<!-- <p>image Input</p> -->
+<p>month Input</p>
+<p>number Input</p>
+<p>radio Input</p>
+<p>range Input</p>
+<p>reset Input</p>
+<p>search Input</p>
+<p>submit Input</p>
+<p>tel Input</p>
+<p>time Input</p>
+<p>url Input</p>
+<p>week Input</p>
+
+<p>Select</p>
+<p>Textarea</p>
+<p>button</p>
+<p>fieldset</p>
+<p>legend</p>
+<p>datalist</p>
+<p>output</p>
+<p>option</p>
+<p>optgroup</p>
