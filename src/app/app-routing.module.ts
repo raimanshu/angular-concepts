@@ -1,8 +1,10 @@
+import { DailyUpdatesModule } from './daily-updates/daily-updates.module';
 import { StringInterpolationComponent } from './data-binding/string-interpolation/string-interpolation.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IntroComponent } from './intro/intro.component';
 import { EventBindingComponent } from './data-binding/event-binding/event-binding.component';
+import { PropertyBindingComponent } from './data-binding/property-binding/property-binding.component';
 
 const routes: Routes = [
   {
@@ -10,6 +12,9 @@ const routes: Routes = [
   },
   {
     path:'data-binding/event-binding', component: EventBindingComponent
+  },
+  {
+    path:'data-binding/property-binding', component: PropertyBindingComponent
   },
   {
     path: 'component-interaction',
@@ -30,6 +35,14 @@ const routes: Routes = [
   {
     path: 'angular-forms',
     loadChildren: () => import('./angular-forms/angular-forms.module').then(m => m.AngularFormsModule)
+  },
+  {
+    path: 'daily-updates',
+    loadChildren: () => import('./daily-updates/daily-updates.module').then(m => m.DailyUpdatesModule)
+  },
+  {
+    path: 'angular-cli',
+    loadChildren: () => import('./angular-cli/angular-cli.module').then(m => m.AngularCliModule)
   },
   {
     path:'intro', component: IntroComponent

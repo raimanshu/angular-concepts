@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventBindingComponent implements OnInit {
 
+  eventData;
+  text = '';
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showText(event){
+    console.log(event);
+    this.text = "This is shown on click inside function";
+
+  }
 }

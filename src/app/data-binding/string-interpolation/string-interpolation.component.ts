@@ -20,4 +20,8 @@ export class StringInterpolationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  functionReturn(){
+    return this.variable_1;
+  }
+
 }

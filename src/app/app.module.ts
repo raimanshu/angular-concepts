@@ -10,7 +10,7 @@ import { ComponentsModule } from './shared/components/components.module';
 @NgModule({
   declarations: [
     AppComponent,
-    IntroComponent
+    IntroComponent,
   ],
   imports: [
     BrowserModule,

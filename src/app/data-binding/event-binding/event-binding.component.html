@@ -3,6 +3,9 @@
 <h3>Intro :-</h3>
 
 <h3>Points to remember :-</h3>
+- To transfer data from template<br>
+- What is $event - special variable in angular to send data of that DOM event that was raised<br>
+- We cannot use other variable like varable, text etc or $variable, $text etc in place of <b>$event</b>. We get "" inside the function.<br>
 
 <h3>Implementation :-</h3>
 1) create a function inside ts file <br>
@@ -34,4 +37,18 @@
 {{"(mouseup)=\'function_name($event)\'"}} <br>
 {{"(mousedown)=\'function_name($event)\'"}} <br>
 {{"(mouseenter)=\'function_name($event)\'"}} <br>
+
+<h3>Example :-</h3>
+<pre> show text on click of a button after going inside the function</pre>
+<button (click)="showText($event)">inside function</button><br>
+{{text}}<br>
+-------------------------------<br>
+<pre> show text on click of a button without going inside the function</pre>
+<button (click)="text = 'This is shown on click inside function'">inside html</button><br>
+{{text}}<br>
+-------------------------------<br>
+<pre> show text on click of a button without going inside the function</pre>
+<button (click)="text = ''">clear variable data</button><br>
+{{text}}<br>
+-------------------------------<br>
 

@@ -12,4 +12,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToPreviousPage(){
+    history.back()
+  }
+
+  goToNextPage(){
+    history.forward();
+  }
 }

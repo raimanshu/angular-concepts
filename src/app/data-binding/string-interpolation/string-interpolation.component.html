@@ -13,16 +13,43 @@ declared_variable = assign_a_value ; <br>
 <span>{{</span>declared_variable<span>}}</span> <br>
 
 <h3>Example :-</h3>
+<pre>variable_1 = "This is 'variable_1' value";</pre>
 {{variable_1}}<br>
 -------------------------------<br>
+<pre>Using javascript property of variable like length</pre>
+{{variable_1.length}}<br>
+-------------------------------<br>
+<pre>Using javascript methods on variable like toUpperCase()</pre>
+{{variable_1.toUpperCase()}}<br>
+-------------------------------<br>
+<pre>Calling a function inside interpolation</pre>
+{{functionReturn()}}<br>
+-------------------------------<br>
+<pre>variable_2 = 5;</pre>
 {{variable_2}}<br>
 -------------------------------<br>
+<pre>variable_3 = 1.5;</pre>
 {{variable_3}}<br>
 -------------------------------<br>
+<pre>variable_4 = null;</pre>
 {{variable_4}}<br>
 -------------------------------<br>
+<pre>variable_5 = undefined;</pre>
 {{variable_5}}<br>
 -------------------------------<br>
+<pre>variable_6 = [1,'2'];</pre>
 {{variable_6}}<br>
 -------------------------------<br>
+<pre>variable_1 = "This is 'variable_1' value";</pre>
 {{variable_7}}<br>
+-------------------------------<br>
+<pre> String with variable variable_2</pre>
+{{"String with variable" + variable_2}}<br>
+-------------------------------<br>
+<pre> Assigning variable inside interpolation like a = 2+2. This will give error</pre>
+<!-- {{a = 2+2}} -->
+<br>
+-------------------------------<br>
+<pre> Donot have access to global variables like window, document etc. This will give error</pre>
+<!-- {{window.location.href}} -->
+<br>

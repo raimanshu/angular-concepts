@@ -1,0 +1,28 @@
+<h1 style="text-align: center;">Property Binding</h1>
+
+<h3>Intro :-</h3>
+
+<h3>Reference :-</h3>
+- Codevolution from youtube
+
+
+<h3>Points to remember :-</h3>
+- Difference betweeen HTML element and DOM property <br>
+- Difference between attribute vs property - Attributes and properties are not same, Attributes are related to HTML but property is related to DOM, Attributes initialize the DOM properties then they are done but Attributes values cannot change once they are initialized <br>
+- Difference between Interpolation and property value - Interpollation works with string values but property binding with attributes and DOM properties like with disabled property we cannot assign false directly with interpollation <br>
+- $0.getAttribute('value'); - to get value of that attribute
+- $0.value; - to get value of that attribute of DOM <br>
+
+
+<h3>Implementation :-</h3>
+<!-- 1) Declare a variable in ts file <br>
+declared_variable ; <br>
+2) Assign a value to the declared variable in ts <br>
+declared_variable = assign_a_value ; <br>
+3) put the declared variable in html file <br>
+<span>{{</span>declared_variable<span>}}</span> <br> -->
+
+<h3>Example :-</h3>
+<pre> variable_1 attached with disabled property of input, variable_1 = true/false;</pre>
+<input [disabled]="variable_1" value="test" /><br>
+-------------------------------<br>
