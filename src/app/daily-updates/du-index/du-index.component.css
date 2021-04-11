@@ -1,8 +1,9 @@
-div{
+.outer_div{
     border: 1px solid green;
     border-radius: 10px;
     padding: 10px;
     margin: 5px;
+    cursor: pointer;
 }
 div p.text-center{
     border-bottom: 1px solid #000;

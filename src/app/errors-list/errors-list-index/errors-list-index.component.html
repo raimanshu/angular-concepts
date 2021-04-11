@@ -1,15 +1,37 @@
-<div>
-    <label>Problem :</label><span>ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value: ''. Current value: 'I am a data variable comming from child component1 to parent component'.</span><br>
-    <label>Solution :</label><span>Put the statements/function statements in ngAfterContentInit() </span>
+<div class="outer_div">
+  <p data-toggle="collapse" data-target="#1"><b> 
+    <label>Problem : </label> 
+    <span> ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value: ''. Current value: 'I am a data variable comming from child component1 to parent component'.</span>
+  </b></p>
+  <pre id="1" class="collapse">
+      <label>Solution :</label>
+      <span>Put the statements/function statements in ngAfterContentInit() </span>
+  </pre>
 </div>
 
-<div>
-    <label>Problem :</label><span>Error: Export of name 'ngForm' not found!</span><br>
-    <label>Solution :</label><span>Put FormsModule in module. This error was due to using [(ngModel)] and not including FormsModule. </span>
+<div class="outer_div">
+  <p data-toggle="collapse" data-target="#2"><b> 
+    <label>Problem : </label> 
+    <span>Error: Export of name 'ngForm' not found!</span>
+  </b></p>
+  <pre id="2" class="collapse">
+      <label>Solution :</label>
+      <span>Put FormsModule in module. This error was due to using [(ngModel)] and not including FormsModule. </span>
+  </pre>
 </div>
 
-Error: Uncaught (in promise): NullInjectorError: R3InjectorError(ReactiveFormsModule)[FormBuilder -> FormBuilder -> FormBuilder -> FormBuilder -> FormBuilder]: 
-  NullInjectorError: No provider for FormBuilder!
+<div class="outer_div">
+  <p data-toggle="collapse" data-target="#3"><b> 
+    <label>Problem : </label> 
+    <span>Error: Uncaught (in promise): NullInjectorError: R3InjectorError(ReactiveFormsModule)[FormBuilder -> FormBuilder -> FormBuilder -> FormBuilder -> FormBuilder]: 
+      NullInjectorError: No provider for FormBuilder!
+    
+      No provider for ControlContainerng</span>
+  </b></p>
+  <pre id="3" class="collapse">
+      <label>Solution :</label>
+      <span>removed  ngModelGroup="input"</span>
+  </pre>
+</div>
 
-  No provider for ControlContainerng
--removed  ngModelGroup="input"
+
