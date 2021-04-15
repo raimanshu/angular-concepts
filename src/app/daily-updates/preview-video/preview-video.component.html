@@ -1,0 +1,19 @@
+
+<!-- <input type="file" (change)="onFileSelect($event)" > -->
+
+<!-- <video width="320" height="240" controls  formControl="imageForm">
+    <source src="" type="video/mp4">
+
+    Your browser does not support the video tag.
+</video> -->
+
+<label>Preview image/video (Template driven form)</label>
+<img [src]="url" *ngIf="format==='image' && url" height="200"> <br/>
+<video [src]="url" *ngIf="format==='video' && url" height="200" controls></video> <br/>
+<input type='file' (change)="onSelectFile($event)" />
+
+Working on ...................
+<label>Preview multiple image/video (Template driven form)</label>
+<img [src]="url" *ngIf="format==='image' && url" height="200"> <br/>
+<video [src]="url" *ngIf="format==='video' && url" height="200" controls></video> <br/>
+<input type='file' (change)="onSelectFile1($event)"  multiple />

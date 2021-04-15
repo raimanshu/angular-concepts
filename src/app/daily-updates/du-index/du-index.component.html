@@ -8,7 +8,8 @@
 </div>
 
 <div class="outer_div">
-    <p class="text-center" data-toggle="collapse" data-target="#2"><b>Converting git repo into in vs vode structure </b></p>
+    <p class="text-center" data-toggle="collapse" data-target="#2"><b>Converting git repo into in vs vode structure </b>
+    </p>
 
     <pre id="2" class="collapse">
     <p>Open any git repo in browser -> add <b>1s</b> at the end of 'github' before .com</p>
@@ -34,8 +35,80 @@
 </div>
 
 <div class="outer_div">
-    <p class="text-center" data-toggle="collapse" data-target="#5"><b>Add and edit functionality on same component</b></p>
+    <p class="text-center" data-toggle="collapse" data-target="#5"><b>Add and edit functionality on same component</b>
+    </p>
     <pre id="5" class="collapse">
         <p><button>Working on this component</button></p>
+    </pre>
+</div>
+
+<div class="outer_div">
+    <p class="text-center" data-toggle="collapse" data-target="#6"><b>Creating dashed line using css</b></p>
+    <pre id="6" class="collapse">
+        <label>For Horizontal line</label>
+        <p>div{{ '{' }}
+            background-image: linear-gradient(to right, black 30%, transparent 0%);
+            background-size: 10px 3px;
+            {{ '{' }}</p>
+        <label>For Vertical line</label>
+        <p>div{{ '{' }}
+            background-image: linear-gradient(black 33%, transparent 0%);
+            background-size: 3px 10px;
+            {{ '{' }}</p>
+    </pre>
+</div>
+
+<div class="outer_div">
+    <p class="text-center" data-toggle="collapse" data-target="#7"><b>Comparing forEach, for, reduce, map, filter </b>
+    </p>
+    <pre id="7" class="collapse">
+        <label>Performance speed : <span>forEach < reduce < map < filter < for </span></label>
+        <p>Ref : https://www.measurethat.net/Benchmarks/Show/2235/0/foreach-vs-reduce-vs-map-vs-filter-vs-for</p>
+
+       
+    </pre>
+</div>
+
+<div class="outer_div">
+    <p class="text-center" data-toggle="collapse" data-target="#8"><b>Preview image/video before uploading </b></p>
+    <pre id="8" class="collapse">
+        <!-- <label>Performance speed : <span>forEach < reduce < map < filter < for </span></label>
+        <p>Ref : https://www.measurethat.net/Benchmarks/Show/2235/0/foreach-vs-reduce-vs-map-vs-filter-vs-for</p> -->
+        <p><button [routerLink]="['/daily-updates/preview_image_video']" >Working on this component</button></p>
+    </pre>
+</div>
+
+<div class="outer_div">
+    <p class="text-center" data-toggle="collapse" data-target="#9"><b>Close notification without using jquery</b></p>
+    <pre id="9" class="collapse">
+        <!-- <label>Performance speed : <span>forEach < reduce < map < filter < for </span></label>
+        <p>Ref : https://www.measurethat.net/Benchmarks/Show/2235/0/foreach-vs-reduce-vs-map-vs-filter-vs-for</p> -->
+    </pre>
+</div>
+
+<div class="outer_div">
+    <p class="text-center" data-toggle="collapse" data-target="#10"><b>External Javascript file communication with
+            angular </b></p>
+    <pre id="10" class="collapse">
+        <p><button [routerLink]="['/daily-updates/external_js_file_comm']" >External Javascript file communication with angular</button></p>
+    </pre>
+</div>
+
+<div class="outer_div">
+    <p class="text-center" data-toggle="collapse" data-target="#11"><b>Passing object from html to ts without calling a
+            function + Using single formControl</b></p>
+    <pre id="11" class="collapse">
+            <div class="form-group">
+           <select [formControl]="singleComponent" (change)="getSelectValue()" class="form-control">
+               <option [ngValue]="option" *ngFor="let option of optionList"  >{{option.value}}</option>
+           </select>
+        </div>
+    </pre>
+</div>
+
+<div class="outer_div">
+    <p class="text-center" data-toggle="collapse" data-target="#12"><b>Removing focus on button after clicking</b></p>
+    <pre id="12" class="collapse">
+        <p>Working on it................</p>
     </pre>
 </div>

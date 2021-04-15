@@ -1,0 +1,19 @@
+<html>  
+<head>  
+    <app-root></app-root>  
+    <base href="/">  
+    <!-- <script src="D:/demonstrateOutside/runtime.js"></script>  
+    <script src="D:/demonstrateOutside/polyfills.js"></script>  
+    <script src="D:/demonstrateOutside/styles.js"></script>  
+    <script src="d:/demonstrateOutside/vendor.js"></script>  
+    <script src="d:/demonstrateOutside/main.js"></script>   -->
+    <script type="text/javascript">  
+        function callAngularFunction() {  
+            window['angularComponentReference'].zone.run(() => { window.angularComponentReference.loadAngularFunction(); });  
+        }  
+    </script>   
+</head>  
+<body>  
+    <button type="button" onclick="callAngularFunction();">Call Angular 2 Function </button>  
+</body>  
+</html> 

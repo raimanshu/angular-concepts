@@ -45,6 +45,10 @@ const routes: Routes = [
     loadChildren: () => import('./angular-cli/angular-cli.module').then(m => m.AngularCliModule)
   },
   {
+    path: 'rxjs',
+    loadChildren: () => import('./rxjs/rxjs.module').then(m => m.RxjsModule)
+  },
+  {
     path:'intro', component: IntroComponent
   },
   { path: '',   redirectTo: 'intro', pathMatch: 'full' }, // redirect to `first-component`
