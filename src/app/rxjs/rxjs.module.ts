@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { RxjsRoutingModule } from './rxjs-routing.module';
 import { RxjsIndexComponent } from './rxjs-index/rxjs-index.component';
-import { SubjectComponent } from './subject/subject.component';
+import { SubjectsModule } from './subjects/subjects.module';
+
 
 
 @NgModule({
-  declarations: [RxjsIndexComponent, SubjectComponent],
+  declarations: [RxjsIndexComponent],
   imports: [
     CommonModule,
-    RxjsRoutingModule
+    RxjsRoutingModule,
+    SubjectsModule
   ]
 })
 export class RxjsModule { }

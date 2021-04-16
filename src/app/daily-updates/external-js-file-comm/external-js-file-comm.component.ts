@@ -28,21 +28,23 @@ declare function myMethod();
 })
 export class ExternalJsFileCommComponent implements OnInit {
 
+  test = "testing"
   constructor(
     private ngZone: NgZone,
   ) { }
 
   ngOnInit(): void {
-    // window['angularComponentReference'] = { component: this, zone: this.ngZone, loadAngularFunction: () => this.angularFunctionCalled(), };  
+    window['angularComponentReference'] = { component: this, zone: this.ngZone, loadAngularFunction: () => this.angularFunctionCalled(), };  
 
 
     // (<any>window).my = (<any>window).my || {};
     // (<any>window).my.namespace = (<any>window).my.namespace || {};
     // (<any>window).my.namespace.publicFunc = this.publicFunc.bind(this);
     
-    window['angularComponentReference'] = { component: this, zone: this.ngZone, loadAngularFunction: () => this.angularFunctionCalled(), };  
+    // window['angularComponentReference'] = { component: this, zone: this.ngZone, loadAngularFunction: () => this.angularFunctionCalled(), };  
 
   }
+
 
   ngOnDestroy() {
     // window.angularComponent = null;
@@ -94,5 +96,34 @@ export class ExternalJsFileCommComponent implements OnInit {
   // }
 
   // Interface Window { my: any; }
+
+  createDynamicScript(){
+
+    var bs2 = window.document.createElement("script");
+    bs2.id = "blueSnap-script2";
+    bs2.type = "text/javascript";
+    // bs2.innerHTML=`
+    //   bluesnap.hostedPaymentFieldsSubmitData(function(callback){
+    //       if (null != callback.cardData) {
+    //           var fraudSessionId = callback.transactionFraudInfo.fraudSessionId;
+    //           var cardDetails = callback.cardData;
+    //           window.angularComponentReference.zone.run(() => { window.angularComponentReference.loadAngularFunction(cardDetails); });
+               
+    //       } else {
+    //           var errorArray = callback.error;
+    //           for (i in errorArray) {
+    //               console.log("Received error: tagId= " +
+    //                   errorArray[i].tagId + ", errorCode= " +
+    //                   errorArray[i].errorCode + ", errorDescription= " +
+    //                   errorArray[i].errorDescription);
+    //           }
+    //       }
+    //   })`;
+    bs2.innerHTML = `
+    <button onclick="angularFunctionCalled()" onload="angularFunctionCalled()">Hello <button>
+    `;
+    
+    window.document.body.appendChild(bs2);
+  }
 
 }
