@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-nav',
@@ -22,6 +24,13 @@ export class SideNavComponent implements OnInit {
   // logo: any = 'assets/img/defoultlogo.png'
 
   public isToggle: string = "false";
+  dashboard = ['/intro'];
+  angular_cli = ['/angular-cli'];
+  rxjs = ['/rxjs'];
+  references = ['/references']
+
+
+
   // public isSmToggle: string = 'false';
   // home = ['/dashboard', '/graphic-data'];
 
@@ -35,152 +44,151 @@ export class SideNavComponent implements OnInit {
   // oseUrls = ['/seasonal_targets'];
   // DataInSitesUrls = ['/data-insight'];
   constructor(
-  //   // private _commonService: CommonService,
-  //   // public router: Router,
-  //   private location: Location
+    //   // private _commonService: CommonService,
+    public router: Router,
+    private location: Location
   ) {
   }
 
   ngOnInit(): void {
-  //   this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  //   // this._commonService.castToggle.subscribe(toggle => this.isToggle = toggle);
-  //   this.logoimage();
+    //   this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    //   // this._commonService.castToggle.subscribe(toggle => this.isToggle = toggle);
+    //   this.logoimage();
   }
 
   handleActiveClass(type) {
-  //   // let relativePath: string = this.location.path().split('?')[0];
-  //   let res: boolean;
-  //   switch (type) {
-  //     case 'home':
-  //       res = false;
-  //       for (let i = 0; i < this.home.length; i++) {
-  //         // if (relativePath.includes(this.home[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
-  //     case 'level':
-  //       res = false;
-  //       for (let i = 0; i < this.levelUrls.length; i++) {
-  //         // if (relativePath.includes(this.levelUrls[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
-  //     case 'tank':
-  //       res = false;
-  //       for (let i = 0; i < this.tankUrls.length; i++) {
-  //         // if (relativePath.includes(this.tankUrls[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
-  //     case 'route':
-  //       res = false;
-  //       for (let i = 0; i < this.routeUrls.length; i++) {
-  //         // if (relativePath.includes(this.routeUrls[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
+      let relativePath: string = this.location.path().split('?')[0];
+      let res: boolean;
+      switch (type) {
+        case 'dashboard':
+          res = false;
+          for (let i = 0; i < this.dashboard.length; i++) {
+            if (relativePath.includes(this.dashboard[i])) {
+              res = true
+            }
+          }
+          return res;
+          break;
+        case 'angular_cli':
+          res = false;
+          for (let i = 0; i < this.angular_cli.length; i++) {
+            if (relativePath.includes(this.angular_cli[i])) {
+              res = true
+            }
+          }
+          return res;
+          break;
+        case 'rxjs':
+          res = false;
+          for (let i = 0; i < this.rxjs.length; i++) {
+            if (relativePath.includes(this.rxjs[i])) {
+              res = true
+            }
+          }
+          return res;
+          break;
+        case 'references':
+          res = false;
+          for (let i = 0; i < this.references.length; i++) {
+            if (relativePath.includes(this.references[i])) {
+              res = true
+            }
+          }
+          return res;
+          break;
 
-  //     case 'customers':
-  //       res = false;
-  //       for (let i = 0; i < this.customersUrls.length; i++) {
-  //         // if (relativePath.includes(this.customersUrls[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
-  //     case 'admin':
-  //       res = false;
-  //       for (let i = 0; i < this.adminUrls.length; i++) {
-  //         // if (relativePath.includes(this.adminUrls[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
-  //     case 'ose':
-  //       res = false;
-  //       for (let i = 0; i < this.oseUrls.length; i++) {
-  //         // if (relativePath.includes(this.oseUrls[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
-  //     case 'DataInSites':
-  //       res = false;
-  //       for (let i = 0; i < this.DataInSitesUrls.length; i++) {
-  //         // if (relativePath.includes(this.DataInSitesUrls[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
-  //     case 'help':
-  //       res = false;
-  //       for (let i = 0; i < this.help.length; i++) {
-  //         // if (relativePath.includes(this.help[i])) {
-  //         //   res = true
-  //         // }
-  //       }
-  //       return res;
-  //       break;
-  //     default:
-  //       return false
-  //   }
+    //     case 'customers':
+    //       res = false;
+    //       for (let i = 0; i < this.customersUrls.length; i++) {
+    //         // if (relativePath.includes(this.customersUrls[i])) {
+    //         //   res = true
+    //         // }
+    //       }
+    //       return res;
+    //       break;
+    //     case 'admin':
+    //       res = false;
+    //       for (let i = 0; i < this.adminUrls.length; i++) {
+    //         // if (relativePath.includes(this.adminUrls[i])) {
+    //         //   res = true
+    //         // }
+    //       }
+    //       return res;
+    //       break;
+    //     case 'ose':
+    //       res = false;
+    //       for (let i = 0; i < this.oseUrls.length; i++) {
+    //         // if (relativePath.includes(this.oseUrls[i])) {
+    //         //   res = true
+    //         // }
+    //       }
+    //       return res;
+    //       break;
+    //     case 'DataInSites':
+    //       res = false;
+    //       for (let i = 0; i < this.DataInSitesUrls.length; i++) {
+    //         // if (relativePath.includes(this.DataInSitesUrls[i])) {
+    //         //   res = true
+    //         // }
+    //       }
+    //       return res;
+    //       break;
+    //     case 'help':
+    //       res = false;
+    //       for (let i = 0; i < this.help.length; i++) {
+    //         // if (relativePath.includes(this.help[i])) {
+    //         //   res = true
+    //         // }
+    //       }
+    //       return res;
+    //       break;
+        default:
+          return false
+      }
 
-  //   // let relativePath: string = this.location.path();
 
   }
   openDropdown(el, icon) {
-  //   // let dropdowns = document.querySelectorAll('.sub-menu');
-  //   // dropdowns.forEach(item => {
-  //   //   item.classList.remove('dropdown-active');
-  //   // })
+    //   // let dropdowns = document.querySelectorAll('.sub-menu');
+    //   // dropdowns.forEach(item => {
+    //   //   item.classList.remove('dropdown-active');
+    //   // })
 
-  //   el.classList.toggle('dropdown-active')
-  //   icon.classList.toggle('down')
+    //   el.classList.toggle('dropdown-active')
+    //   icon.classList.toggle('down')
 
-  //   // $(".rotate").click(function () {
-  //   //   $(this).toggleClass("down");
-  //   // })
-  // }
-  // // onLogoChange(e) {
-  // //   if (e.target.files) {
-  // //     let file = e.target.files[0];
-  // //     let reader = new FileReader();
-  // //     reader.onload = () => {
-  // //       this.logo = reader.result;
-  // //     }
-  // //     reader.readAsDataURL(file)
-  // //   }
-  // // }
-  // logoimage() {
-  //   // this._commonService.getDistributorLogo().subscribe(res => {
-  //   //   if (res && res.logo_url != '') {
-  //   //     this.logo = res.logo_url;
-  //   //   }
-  //   // })
+    //   // $(".rotate").click(function () {
+    //   //   $(this).toggleClass("down");
+    //   // })
+    // }
+    // // onLogoChange(e) {
+    // //   if (e.target.files) {
+    // //     let file = e.target.files[0];
+    // //     let reader = new FileReader();
+    // //     reader.onload = () => {
+    // //       this.logo = reader.result;
+    // //     }
+    // //     reader.readAsDataURL(file)
+    // //   }
+    // // }
+    // logoimage() {
+    //   // this._commonService.getDistributorLogo().subscribe(res => {
+    //   //   if (res && res.logo_url != '') {
+    //   //     this.logo = res.logo_url;
+    //   //   }
+    //   // })
 
   }
 
-  removeTankClass(){
+  removeTankClass() {
     this.tankDropdown.nativeElement.classList.remove('dropdown-active');
     this.tankIcon.nativeElement.classList.remove('down');
   }
-  removeCustomerClass(){
+  removeCustomerClass() {
     this.customerDropdown.nativeElement.classList.remove('dropdown-active');
     this.customerIcon.nativeElement.classList.remove('down');
   }
-  removeOseClass(){
+  removeOseClass() {
     this.oseDropdown.nativeElement.classList.remove('dropdown-active');
     this.oseIcon.nativeElement.classList.remove('down');
   }
@@ -190,32 +198,46 @@ export class SideNavComponent implements OnInit {
     this.removeTankClass();
   }
 
-  tDropdown(){
+  tDropdown() {
     this.removeCustomerClass();
     this.removeOseClass();
   }
-  oDropdown(){
+  oDropdown() {
     this.removeCustomerClass();
     this.removeTankClass();
   }
-  cDropdown(){
+  cDropdown() {
     this.removeOseClass();
     this.removeTankClass();
   }
 
   doToggle() {
 
-  //   if (this.isToggle === 'false') {
-  //     // $(".sub-menu").removeClass("dropdown-active");
-  //     // $(".rotate").removeClass("down");
-  //   }
+    //   if (this.isToggle === 'false') {
+    //     // $(".sub-menu").removeClass("dropdown-active");
+    //     // $(".rotate").removeClass("down");
+    //   }
 
-  //   if (window.outerWidth > 1194) {
-  //     this.isToggle = this.isToggle === 'false' ? 'true' : 'false';
-  //   } else {
-  //     this.isSmToggle = this.isSmToggle === 'false' ? 'true' : 'false';
-  //   }
-  //   // this._commonService.doToggle(this.isToggle);
+    //   if (window.outerWidth > 1194) {
+    //     this.isToggle = this.isToggle === 'false' ? 'true' : 'false';
+    //   } else {
+    //     this.isSmToggle = this.isSmToggle === 'false' ? 'true' : 'false';
+    //   }
+    //   // this._commonService.doToggle(this.isToggle);
+  }
+
+  gotoDashboard() {
+    this.router.navigate(['/intro']);
+  }
+
+  gotoAngularCli() {
+    this.router.navigate(['/angular-cli']);
+  }
+  gotoRxjs() {
+    this.router.navigate(['/rxjs']);
+  }
+  gotoDailyUpdates(){
+    this.router.navigate(['/daily-updates']);
   }
 
 }

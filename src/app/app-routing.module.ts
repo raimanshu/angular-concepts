@@ -1,3 +1,4 @@
+import { ReferencesComponent } from './references/references.component';
 import { DailyUpdatesModule } from './daily-updates/daily-updates.module';
 import { StringInterpolationComponent } from './data-binding/string-interpolation/string-interpolation.component';
 import { NgModule } from '@angular/core';
@@ -5,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IntroComponent } from './intro/intro.component';
 import { EventBindingComponent } from './data-binding/event-binding/event-binding.component';
 import { PropertyBindingComponent } from './data-binding/property-binding/property-binding.component';
+import { StyleBindingComponent } from './style-binding/style-binding.component';
 
 const routes: Routes = [
   {
@@ -39,6 +41,18 @@ const routes: Routes = [
   {
     path: 'daily-updates',
     loadChildren: () => import('./daily-updates/daily-updates.module').then(m => m.DailyUpdatesModule)
+  },
+  {
+    path: 'angular-lifecycle',
+    loadChildren: () => import('./angular-lifecycle/angular-lifecycle.module').then(m => m.AngularLifecycleModule)
+  },
+  {
+    path: 'references',
+    component: ReferencesComponent
+  },
+  {
+    path: 'style-binding',
+    component: StyleBindingComponent
   },
   {
     path: 'angular-cli',

@@ -7,10 +7,11 @@ import { ReferencesComponent } from './references/references.component';
 import { PreviewVideoComponent } from './preview-video/preview-video.component';
 import { ExternalJsFileCommComponent } from './external-js-file-comm/external-js-file-comm.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DetectScrollingComponent } from './detect-scrolling/detect-scrolling.component';
 
 
 @NgModule({
-  declarations: [DuIndexComponent, ReferencesComponent, PreviewVideoComponent, ExternalJsFileCommComponent],
+  declarations: [DuIndexComponent, ReferencesComponent, PreviewVideoComponent, ExternalJsFileCommComponent, DetectScrollingComponent],
   imports: [
     CommonModule,
     DailyUpdatesRoutingModule,

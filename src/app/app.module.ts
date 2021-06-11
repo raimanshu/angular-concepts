@@ -7,11 +7,15 @@ import { IntroComponent } from './intro/intro.component';
 import { SharedModule } from './shared/shared.module';
 import { ComponentsModule } from './shared/components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReferencesComponent } from './references/references.component';
+import { StyleBindingComponent } from './style-binding/style-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
+    ReferencesComponent,
+    StyleBindingComponent,
   ],
   imports: [
     BrowserModule,

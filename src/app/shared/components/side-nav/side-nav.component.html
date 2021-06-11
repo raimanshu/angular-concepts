@@ -1,46 +1,98 @@
-<div id="viewport">
-  <!-- Sidebar -->
-  <div id="sidebar">
-    <header>
-      <a href="#">My App</a>
-    </header>
-    <ul class="nav">
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-view-dashboard"></i> Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-link"></i> Shortcuts
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-widgets"></i> Overview
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-calendar"></i> Events
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-info-outline"></i> About
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-settings"></i> Services
-        </a>
-      </li>
-      <li>
-        <a routerLink=" ['/daily-updates']">
-          <i class="zmdi zmdi-comment-more"></i> Daily Learning Updates
-        </a>
-      </li>
-    </ul>
-  </div>
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+        <strong>BS</strong>
+    </div>
 
-</div>
+    <ul class="list-unstyled components">
+        <li [class.active]="handleActiveClass('dashboard')">
+            <a  (click)="gotoDashboard()">
+                <i class="fas fa-paper-plane"></i>
+                Dashboard
+            </a>
+        </li>
+        <li [class.active]="handleActiveClass('angular_cli')">
+            <a (click)="gotoAngularCli()">
+                <i class="fas fa-paper-plane"></i>
+                Angular-cli
+            </a>
+        </li>
+        <li [class.active]="handleActiveClass('rxjs')">
+            <a (click)="gotoRxjs()">
+                <i class="fas fa-paper-plane"></i>
+                RxJs
+            </a>
+        </li>
+        <li [class.active]="handleActiveClass('daily-updates')">
+            <a (click)="gotoDailyUpdates()" >
+                <i class="fas fa-paper-plane"></i>
+                Daily Updates
+            </a>
+        </li>
+        <!-- <li>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href="#">Home 1</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li>
+            <a href="#">
+                <i class="fas fa-briefcase"></i>
+                About
+            </a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-copy"></i>
+                Pages
+            </a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href="#">Page 1</a>
+                </li>
+                <li>
+                    <a href="#">Page 2</a>
+                </li>
+                <li>
+                    <a href="#">Page 3</a>
+                </li>
+            </ul>
+        </li> -->
+        <li>
+            <a href="#">
+                <i class="fas fa-image"></i>
+                Portfolio
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-question"></i>
+                FAQ
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-paper-plane"></i>
+                Contact
+            </a>
+        </li>
+        <li>
+            <a routerLink="/references">
+                <i class="fas fa-paper-plane"></i>
+                References
+            </a>
+        </li>
+    </ul>
+
+    <ul class="list-unstyled CTAs">
+        <li>
+            <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+        </li>
+        <li>
+            <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+        </li>
+    </ul>
+</nav>

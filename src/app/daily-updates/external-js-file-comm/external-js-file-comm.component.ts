@@ -42,6 +42,7 @@ export class ExternalJsFileCommComponent implements OnInit {
     // (<any>window).my.namespace.publicFunc = this.publicFunc.bind(this);
     
     // window['angularComponentReference'] = { component: this, zone: this.ngZone, loadAngularFunction: () => this.angularFunctionCalled(), };  
+    this.createDynamicScript();
 
   }
 
@@ -119,8 +120,13 @@ export class ExternalJsFileCommComponent implements OnInit {
     //           }
     //       }
     //   })`;
-    bs2.innerHTML = `
-    <button onclick="angularFunctionCalled()" onload="angularFunctionCalled()">Hello <button>
+    // bs2.innerHTML = `
+    // <button onclick="angularFunctionCalled()" onload="angularFunctionCalled()">Hello </button>
+    // `;
+    bs2.innerHTML =`
+      function test(){
+        alert("hello");
+      }(angularFunctionCalled());
     `;
     
     window.document.body.appendChild(bs2);
