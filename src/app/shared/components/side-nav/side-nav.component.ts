@@ -27,7 +27,9 @@ export class SideNavComponent implements OnInit {
   dashboard = ['/intro'];
   angular_cli = ['/angular-cli'];
   rxjs = ['/rxjs'];
-  references = ['/references']
+  references = ['/references'];
+  chartsheet = ['/chartsheet'];
+  dailyUpdates = ['/daily-updates'];
 
 
 
@@ -87,6 +89,15 @@ export class SideNavComponent implements OnInit {
           }
           return res;
           break;
+          case 'daily-updates':
+            res = false;
+            for (let i = 0; i < this.dailyUpdates.length; i++) {
+              if (relativePath.includes(this.dailyUpdates[i])) {
+                res = true
+              }
+            }
+            return res;
+            break;
         case 'references':
           res = false;
           for (let i = 0; i < this.references.length; i++) {
@@ -96,6 +107,15 @@ export class SideNavComponent implements OnInit {
           }
           return res;
           break;
+          case 'chartsheet':
+            res = false;
+            for (let i = 0; i < this.chartsheet.length; i++) {
+              if (relativePath.includes(this.chartsheet[i])) {
+                res = true
+              }
+            }
+            return res;
+            break;
 
     //     case 'customers':
     //       res = false;
@@ -239,6 +259,13 @@ export class SideNavComponent implements OnInit {
   gotoDailyUpdates(){
     this.router.navigate(['/daily-updates']);
   }
+  gotoChartsheet(){
+    this.router.navigate(['/chartsheet']);
+  }
+  gotoReferences(){
+    this.router.navigate(['/references']);
+  }
+
 
 }
 

@@ -1,40 +1,61 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lch-index',
   templateUrl: './lch-index.component.html',
+//   template: `
+//   <h2>Life Cycle Hooks</h2>
+
+// `,
   styleUrls: ['./lch-index.component.scss']
 })
-export class LchIndexComponent implements OnInit, OnChanges, DoCheck,AfterContentChecked,AfterContentInit, AfterViewInit, AfterViewChecked, OnDestroy {
+export class LchIndexComponent implements OnInit, OnChanges, DoCheck, AfterContentChecked, AfterContentInit, AfterViewInit, AfterViewChecked, OnDestroy {
 
-  test: number = 0;
-  constructor() { console.log("constructor" + this.test++); }
+  public angular: boolean = false;
+  public displayChild: boolean = false;
+  message;
 
-  ngOnInit(): void {
-    console.log("ngOnInit" + this.test++);
+  constructor() {
+    console.log("AppComponent: Constructor");
   }
 
-  ngOnChanges(){
-    console.log("ngOnChanges" + this.test++);
+  setmessage(value) {
+    this.message = value;
   }
-  ngDoCheck(){
-    console.log("ngDoCheck" + this.test++);
+
+  toggle() {
+    this.displayChild = !this.displayChild;
   }
+
+  ngOnChanges() {
+    console.log("AppComponent: OnChanges");
+  }
+
+  ngOnInit() {
+    console.log("AppComponent: OnInit");
+  }
+
+  ngDoCheck() {
+    console.log("AppComponent: DoCheck");
+  }
+
   ngAfterContentInit() {
-    console.log("ngAfterContentInit" + this.test++);
+    console.log("AppComponent: AfterContentInit");
   }
-  ngAfterContentChecked(){
-    console.log("ngAfterContentChecked" + this.test++);
+
+  ngAfterContentChecked() {
+    console.log("AppComponent:AfterContentChecked");
   }
+
   ngAfterViewInit() {
-    console.log("ngAfterViewInit" + this.test++);
+    console.log("AppComponent:AfterViewInit");
   }
+
   ngAfterViewChecked() {
-    console.log("ngAfterViewChecked" + this.test++);
+    console.log("AppComponent:AfterViewChecked");
   }
+
   ngOnDestroy() {
-    console.log("ngOnDestroy" + this.test++);
+    console.log("AppComponent:OnDestroy");
   }
-
-
 }

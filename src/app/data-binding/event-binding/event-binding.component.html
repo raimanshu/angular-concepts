@@ -41,15 +41,15 @@
 
 <h3>Example :-</h3>
 <pre> show text on click of a button after going inside the function</pre>
-<button (click)="showText($event)">inside function</button><br>
+<button class="btn btn-primary" (click)="showText($event)">inside function</button><br>
 {{text}}<br>
 -------------------------------<br>
 <pre> show text on click of a button without going inside the function</pre>
-<button (click)="text = 'This is shown on click inside function'">inside html</button><br>
+<button class="btn btn-primary" (click)="text = 'This is shown on click inside function'">inside html</button><br>
 {{text}}<br>
 -------------------------------<br>
 <pre> show text on click of a button without going inside the function</pre>
-<button (click)="text = ''">clear variable data</button><br>
+<button class="btn btn-primary" (click)="text = ''">clear variable data</button><br>
 {{text}}<br>
 -------------------------------<br>
 

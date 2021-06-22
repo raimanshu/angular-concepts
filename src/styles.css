@@ -8,12 +8,21 @@ body {
     background: #fafafa;
 }
 
+.btn-primary{
+    background-color: #0a0a98;
+    border-radius: 0;
+    border: 1px solid #0a0a98;
+    padding: 5px 12px;
+    font-size: 14px;
+    margin: 6px;
+}
+
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #000;
 }
 
 a,
@@ -25,12 +34,12 @@ a:focus {
 }
 
 .navbar {
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
+    padding: 10px 5px;
+    background: #718790;
+    /* border: none; */
     border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    box-shadow: -1px 3px 3px rgb(0 0 0 / 10%);
 }
 
 .navbar-btn {
@@ -197,7 +206,7 @@ a.article:hover {
 
 #content {
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
     min-height: 100vh;
     transition: all 0.3s;
 }

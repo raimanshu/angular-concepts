@@ -43,12 +43,12 @@ const routes: Routes = [
     loadChildren: () => import('./daily-updates/daily-updates.module').then(m => m.DailyUpdatesModule)
   },
   {
-    path: 'angular-lifecycle',
-    loadChildren: () => import('./angular-lifecycle/angular-lifecycle.module').then(m => m.AngularLifecycleModule)
-  },
-  {
     path: 'references',
     component: ReferencesComponent
+  },
+  {
+    path: 'chartsheet',
+    loadChildren: () => import('./chartsheet/chartsheet.module').then(m => m.ChartsheetModule)
   },
   {
     path: 'style-binding',

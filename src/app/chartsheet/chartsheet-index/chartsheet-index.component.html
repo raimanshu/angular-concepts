@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <h3 class="text-center">Chart Sheets</h3>
+    <div>
+        <iframe [src]="url" height="500px" width="100%"></iframe>
+
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="putSrc('regex')">Regular Expressions</button>
+        <button class="btn btn-primary" (click)="putSrc('test')">Show google docs in NON_EDIT_MODE</button>
+    </div>
+    <app-cs-angular></app-cs-angular>
+    <app-cs-github></app-cs-github>
+    <app-cs-javascript></app-cs-javascript>
+</div>

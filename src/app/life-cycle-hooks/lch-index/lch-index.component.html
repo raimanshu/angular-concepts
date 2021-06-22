@@ -1,6 +1,56 @@
-<p>lch-index works!</p>
+<div class="container-fluid">
+    <h4 class="text-center">Angular Lifecycle Hooks</h4>
 
-<p>working...........</p>
+    <h6>Intro :-</h6>
 
-- rxjs
+    <h6>Points to remember :-</h6>
 
+    <h6>Implementation :-</h6>
+    <small class="text-danger">*Check consoles</small>
+
+    <h6>Example :-</h6>
+
+    <div>
+        <h6><strong>References :</strong></h6>
+
+        <a href="https://dzone.com/articles/angular-6-part-3-life-cycle-of-a-component">https://dzone.com/articles/angular-6-part-3-life-cycle-of-a-component
+        </a>
+        <br>
+        <a href="https://www.tektutorialshub.com/angular/angular-component-life-cycle-hooks/">https://www.tektutorialshub.com/angular/angular-component-life-cycle-hooks/
+        </a>
+        <br>
+        <a href="https://www.tektutorialshub.com/angular/angular-component-life-cycle-hooks/">https://www.tektutorialshub.com/angular/angular-component-life-cycle-hooks/
+        </a>
+        <br>
+        <a href="https://www.cuelogic.com/blog/angular-lifecycle">https://www.cuelogic.com/blog/angular-lifecycle <span class="text-info">(Recommended)</span>
+        </a>
+        <br>
+        <a
+            href="https://medium.com/bb-tutorials-and-thoughts/angular-understanding-angular-lifecycle-hooks-with-a-sample-project-375a61882478">
+            https://medium.com/bb-tutorials-and-thoughts/angular-understanding-angular-lifecycle-hooks-with-a-sample-project-375a61882478
+        </a>
+        <br>
+        <a href="https://itnext.io/understanding-angular-life-cycle-hooks-91616f8946e3">https://itnext.io/understanding-angular-life-cycle-hooks-91616f8946e3
+        </a>
+        <br>
+    </div>
+
+    <div class="row border border-primary">
+        <div class="col-6 border border-secondary">
+            <button (click)="toggle()">Hide/Show Child</button>
+
+            <input (input)="setmessage(inputMsg.value)" #inputMsg />
+            <button (click)="angular = !angular">{{ angular }}</button>
+        </div>
+        <div class="col-6 border border-secondary">
+            <app-second *ngIf="displayChild" [message]="'Hello'">
+            </app-second>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<!-- <img src="../../../assets/alh1.png" alt=""> -->

@@ -61,7 +61,7 @@
                 </li>
             </ul>
         </li> -->
-        <li>
+        <!-- <li>
             <a href="#">
                 <i class="fas fa-image"></i>
                 Portfolio
@@ -78,9 +78,15 @@
                 <i class="fas fa-paper-plane"></i>
                 Contact
             </a>
+        </li> -->
+        <li [class.active]="handleActiveClass('chartsheet')">
+            <a (click)="gotoChartsheet()">
+                <i class="fas fa-paper-plane"></i>
+                Chartsheet
+            </a>
         </li>
-        <li>
-            <a routerLink="/references">
+        <li [class.active]="handleActiveClass('references')">
+            <a (click)="gotoReferences()">
                 <i class="fas fa-paper-plane"></i>
                 References
             </a>

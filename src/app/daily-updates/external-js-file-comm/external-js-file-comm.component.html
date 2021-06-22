@@ -3,27 +3,27 @@
     <h4>Control flow from ts to js file</h4>
     Need to import file inside component without including inside scripts in angular.json. 
     <div>
-        <button (click)="CallFunction1()">Nested function 1 (var = function())</button>
-        <button (click)="CallFunction2()">Nested function 1 (var = function())</button>
+        <button class="btn btn-primary" (click)="CallFunction1()">Nested function 1 (var = function())</button>
+        <button class="btn btn-primary" (click)="CallFunction2()">Nested function 1 (var = function())</button>
     </div>
     
     <div>
-        <button (click)="CallFunction3()">Single function return function (var = function())</button>
+        <button class="btn btn-primary" (click)="CallFunction3()">Single function return function (var = function())</button>
     </div>
 
     <div>
-        <button (click)="CallFunction4()">Single function return function (function() {{'{}'}})</button>
+        <button class="btn btn-primary" (click)="CallFunction4()">Single function return function (function() {{'{}'}})</button>
     </div>
 
     <div>
-        <button (click)="CallFunction4()">Single function return function inside index.html (function() {{'{}'}})</button>
+        <button class="btn btn-primary" (click)="CallFunction4()">Single function return function inside index.html (function() {{'{}'}})</button>
     </div>
 
     <div>
         Call function of external js file in assets -------------working
         <div>
             Donot need to import file inside component just include inside scripts in angular.json. 
-            <button (click)="CallFunction6()"> Call function of external js file in assets</button>
+            <button class="btn btn-primary" (click)="CallFunction6()"> Call function of external js file in assets</button>
         </div>
     </div>
    
@@ -32,7 +32,7 @@
 <div>
     <h4>Control flow from js to ts file</h4>
     
-   <button (click)="createDynamicScript()" ></button>
+   <button class="btn btn-primary" (click)="createDynamicScript()" ></button>
     
 
 

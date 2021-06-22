@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-header',
@@ -18,5 +20,9 @@ export class HeaderComponent implements OnInit {
 
   goToNextPage(){
     history.forward();
+  }
+
+  toggleSideNav(){
+    $('#sidebar').toggleClass('active');
   }
 }
