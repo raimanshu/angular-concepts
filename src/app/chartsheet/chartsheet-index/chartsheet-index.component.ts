@@ -10,11 +10,12 @@ export class ChartsheetIndexComponent implements OnInit {
 
   private URLs = {
     REGEX: 'https://docs.google.com/document/d/1bhobhh7FAa05oc2nhlQtwYMf5K5fmt76Fog3JLO_QdU/edit?usp=sharing',
-    test: 'https://docs.google.com/document/d/e/2PACX-1vRQ7ak4nczYTVQvYhIr9grVREw6jTsDvVrJDC1BSXmb5L3axOdaPvWA2Eo9L2DWcEnTjlDS7uhWxIeW/pub'
+    test: 'https://docs.google.com/document/d/e/2PACX-1vRQ7ak4nczYTVQvYhIr9grVREw6jTsDvVrJDC1BSXmb5L3axOdaPvWA2Eo9L2DWcEnTjlDS7uhWxIeW/pub',
+    gihub: 'https://docs.google.com/document/d/1BElMFG_U2fS-zz2lyNh3ISttNOHTCS3sntf3RzxBkUA/edit?usp=sharing'
   }
   url;
 
-   constructor(
+  constructor(
     protected _sanitizer: DomSanitizer
   ) { }
 
@@ -29,6 +30,9 @@ export class ChartsheetIndexComponent implements OnInit {
         break;
       case 'test':
         this.url = this._sanitizer.bypassSecurityTrustResourceUrl(this.URLs.test);
+        break;
+      case 'github':
+        this.url = this._sanitizer.bypassSecurityTrustResourceUrl(this.URLs.gihub);
         break;
 
       default:
