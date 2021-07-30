@@ -1,0 +1,25 @@
+Ref : https://www.tothenew.com/blog/javascript-splice-vs-slice/
+
+https://www.geeksforgeeks.org/what-is-the-difference-between-array-slice-and-array-splice-in-javascript/
+
+https://www.freecodecamp.org/news/lets-clear-up-the-confusion-around-the-slice-splice-split-methods-in-javascript-8ba3266c29ae/
+
+https://www.freecodecamp.org/news/javascript-array-slice-vs-splice-whats-the-difference/
+
+
+
+1. The splice() method returns the removed item(s) in an array and slice() method returns the selected element(s) in an
+array, as a new array object.
+
+2. The splice() method changes the original array and slice() method doesn’t change the original array.
+
+3. The splice() method can take n number of arguments:
+Argument 1: Index, Required. An integer that specifies at what position to add /remove items, Use negative values to
+specify the position from the end of the array.
+Argument 2: Optional. The number of items to be removed. If set to 0(zero), no items will be removed. And if not passed,
+all item(s) from provided index will be removed.
+Argument 3…n: Optional. The new item(s) to be added to the array.
+
+4. The slice() method can take 2 arguments:
+Argument 1: Required. An integer that specifies where to start the selection (The first element has an index of 0). Use negative numbers to select from the end of an array.
+Argument 2: Optional. An integer that specifies where to end the selection. If omitted, all elements from the start position and to the end of the array will be selected. Use negative numbers to select from the end of an array.

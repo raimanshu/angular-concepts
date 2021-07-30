@@ -1,0 +1,6 @@
+.outer_div:hover{
+    cursor: pointer;
+    border: 3px solid #95959e;
+    font-weight: bold;
+    color: black;
+}

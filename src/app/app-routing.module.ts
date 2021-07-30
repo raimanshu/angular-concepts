@@ -63,6 +63,10 @@ const routes: Routes = [
     loadChildren: () => import('./rxjs/rxjs.module').then(m => m.RxjsModule)
   },
   {
+    path: 'differences',
+    loadChildren: () => import('./differences/differences.module').then(m => m.DifferencesModule)
+  },
+  {
     path:'intro', component: IntroComponent
   },
   { path: '',   redirectTo: 'intro', pathMatch: 'full' }, // redirect to `first-component`
